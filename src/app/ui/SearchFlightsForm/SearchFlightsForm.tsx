@@ -10,8 +10,7 @@ import { FlightDate } from "./FlightDate";
 import { Departure } from "./Departure";
 import { Destination } from "./Destination";
 import { FlightClass } from "./FlightClass";
-import React, { useState } from "react";
-import { AxiosError } from "axios";
+import React from "react";
 
 export const SearchFlightsForm = () => {
   const {
@@ -38,7 +37,7 @@ export const SearchFlightsForm = () => {
         adults: parseInt(passengersCount, 10),
         cabinClass: cabinClass,
       };
-      console.log({ searchParams });
+
       setIsLoading(true);
       try {
         const flights = await searchFlights(searchParams);

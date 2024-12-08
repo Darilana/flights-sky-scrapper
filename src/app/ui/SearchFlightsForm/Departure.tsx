@@ -14,7 +14,6 @@ export const Departure = () => {
       const airports = await searchAirports({
         query: newVal,
       });
-      console.log({ airports });
       setDepartures(airports);
     },
     300,
